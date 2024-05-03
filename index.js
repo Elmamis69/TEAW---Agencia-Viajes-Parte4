@@ -11,7 +11,7 @@ const app = express();
 app.use('/registrar', express.static(path.join(__dirname, 'registrar')));
 
 // Middleware para analizar datos de solicitud codificados en json
-app.use(bodyParser.json());
+app.use(bodyParser.json()); 
 
 // Middleware para analizar datos de formulario
 app.use(bodyParser.urlencoded({ extended: true }));

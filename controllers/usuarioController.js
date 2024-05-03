@@ -1,6 +1,8 @@
 const UsuarioDAO = require('../dataAccess/usuarioDAO');
 const jwtUtils = require('../utils/jwt');
-const { AppError } = require('../utils/appError');
+
+const AppError = require('../utils/appError');  
+
 
 class UsuarioController {
   static async autenticarUsuario(req, res, next) {
