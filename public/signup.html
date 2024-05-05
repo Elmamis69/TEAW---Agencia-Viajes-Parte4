@@ -4,23 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Si tienes un archivo de estilos CSS, asegúrate de enlazarlo aquí -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <link rel="stylesheet" href="signup.css">
+    <style>
+        /* Estilos CSS */
+        .login-container {
+            font-family: 'Poppins', sans-serif;
+        }
+        .forgot-password {
+            font-style: italic;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h2>Registro</h2>
-    <form action="/register" method="POST">
-        <div class="section">
-            <div class="title">Username</div>
-            <div class="field"><input type="text" id="username" name="username"></div>
-        </div>
-        <div class="section">
-            <div class="title">Password</div>
-            <div class="field"><input type="password" id="password" name="password"></div>
-        </div>
-        <div class="section">
-            <div class="button"><input type="submit" value="Registrar usuario"></div>
-            <div class="buttona"><a href="index.html">Login</a></div>
-        </div>
-    </form>
+    <img src="logo-sin-letra.png" alt="Logo" class="logo">
+    <div class="login-container">
+        <h2>Registrarse</h2>
+        <form action="/register" method="POST"> <!-- Cambiado el action -->
+            <div class="form-group">
+                <div class="title">Username</div>
+                <div class="field"><input type="text" id="username" name="username"></div>
+            </div>
+            <div class="form-group">
+                <div class="title">Email</div>
+                <div class="field"><input type="email" id="email" name="email"></div>
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div>
+                <p>¿Listo para comenzar tus aventuras?</p>
+            </div>
+            <button type="submit">Registrar Cuenta</button>
+            <div class="forgot-password" id="register-link"> 
+                <a href="index.html">¿Ya tienes cuenta?</a> 
+            </div>
+        </form>
+    </div>
 </body>
 </html>
